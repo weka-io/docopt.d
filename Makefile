@@ -6,8 +6,8 @@ DMDLINK = -Isource -L$(DOCOPTLIB)
 
 DFLAGS = -debug
 
-$(DOCOPTLIB): source/*.d
-	dmd -lib -oflibdocopt.a source/*.d
+$(DOCOPTLIB): source/std/docopt/*.d
+	dmd -lib -oflibdocopt.a source/std/docopt/*.d
 
 test/test_docopt: $(DOCOPTLIB)
 	dmd $(DFLAGS) test/test_docopt.d -oftest/test_docopt $(DMDLINK)

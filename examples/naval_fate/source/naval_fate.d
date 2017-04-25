@@ -1,6 +1,6 @@
 import std.stdio;
 
-import docopt;
+import std.docopt;
 
 int main(string[] args) {
 
@@ -22,7 +22,7 @@ int main(string[] args) {
     --drifting    Drifting mine.
 ";
 
-    auto arguments = docopt.docopt(doc, args[1..$], true, "0.3.0");
+    auto arguments = std.docopt.docopt(doc, args[1..$], true, "0.3.0");
     writeln(arguments);
     return 0;
 }

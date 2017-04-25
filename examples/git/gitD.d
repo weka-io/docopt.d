@@ -6,7 +6,7 @@ import std.path;
 import std.process;
 import std.c.stdlib;
 
-import docopt;
+import std.docopt;
 
 static auto doc = "
 usage: git [--version] [--exec-path=<path>] [--html-path]
@@ -38,7 +38,7 @@ int main(string[] argv) {
 
     bool help = true;
     bool optionsFirst = true;
-    auto parsed = docopt.docopt(doc, argv[1..$], help, "git version 1.7.4.4",
+    auto parsed = std.docopt.docopt(doc, argv[1..$], help, "git version 1.7.4.4",
                                 optionsFirst);
 
     auto cmds = ["add", "branch", "checkout", "clone", "commit",

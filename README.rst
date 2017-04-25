@@ -15,7 +15,7 @@ and instead can write only the help message--*the way you want it*.
 
    import std.stdio;
 
-   import docopt;
+   import std.docopt;
 
    int main(string[] args) {
        
@@ -88,7 +88,7 @@ API
 
 .. code:: d
 
-    import docopt;
+    import std.docopt;
 
 .. code:: d
 

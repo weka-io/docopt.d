@@ -1,3 +1,5 @@
+module std.docopt.argvalue;
+
 //  D command-line interface parser that will make you smile.
 //  Copyright (c) 2014, 2015 Bob Tolbert, bob@tolbert.org
 //  Licensed under terms of MIT license (see LICENSE-MIT)

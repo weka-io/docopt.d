@@ -1,3 +1,5 @@
+module std.docopt.patterns;
+
 //  D command-line interface parser that will make you smile.
 //  Copyright (c) 2014, 2015 Bob Tolbert, bob@tolbert.org
 //  Licensed under terms of MIT license (see LICENSE-MIT)
@@ -19,7 +21,7 @@ import std.ascii;
 import std.conv;
 import core.stdc.stdlib;
 
-import argvalue;
+import std.docopt.argvalue;
 
 package struct PatternMatch {
     bool status;

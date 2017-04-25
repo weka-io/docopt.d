@@ -17,7 +17,7 @@ import std.file;
 import std.path;
 import std.json;
 
-import docopt;
+import std.docopt;
 
 
 string sortedJSON(string input) {
@@ -68,7 +68,7 @@ class DocoptTestItem {
     bool runTest() {
         string result;
         try {
-            docopt.ArgValue[string] temp = docopt.parse(_doc, _argv);
+            std.docopt.ArgValue[string] temp = std.docopt.parse(_doc, _argv);
             result = prettyPrintArgs(temp);
         } catch (DocoptArgumentError e) {
             result = "\"user-error\"";
@@ -127,7 +127,7 @@ int main(string[] args) {
     auto raw = readText(args[1]);
 
     auto testcases = splitTestCases(raw);
-    uint passed[];
+    uint[] passed;
     foreach(uint i, test; testcases) {
         if (test.runTest()) {
             passed ~= i;

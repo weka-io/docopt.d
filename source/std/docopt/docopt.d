@@ -1,3 +1,5 @@
+module std.docopt.docopt;
+
 //  D command-line interface parser that will make you smile.
 //  Copyright (c) 2014, 2015 Bob Tolbert, bob@tolbert.org
 //  Licensed under terms of MIT license (see LICENSE-MIT)
@@ -19,9 +21,9 @@ import std.conv;
 import core.stdc.stdlib;
 import std.json;
 
-private import argvalue;
-private import patterns;
-private import tokens;
+private import std.docopt.argvalue;
+private import std.docopt.patterns;
+private import std.docopt.tokens;
 
 class DocoptLanguageError : Exception {
     this(string message, string file = __FILE__, size_t line = __LINE__) {

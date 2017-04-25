@@ -1,6 +1,6 @@
 import std.stdio;
 
-import docopt;
+import std.docopt;
 
 static auto doc = "
 usage: git push [options] [<repository> [<refspec>...]]
@@ -28,6 +28,6 @@ options:
 ";
 
 int main(string[] argv) {
-    writeln(prettyPrintArgs(docopt.docopt(doc, argv[1..$])));
+    writeln(prettyPrintArgs(std.docopt.docopt(doc, argv[1..$])));
     return 0;
 }

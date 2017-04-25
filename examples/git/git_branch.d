@@ -1,6 +1,6 @@
 import std.stdio;
 
-import docopt;
+import std.docopt;
 
 static auto doc = "
 usage: git branch [options] [-r | -a] [--merged=<commit> | --no-merged=<commit>]
@@ -31,6 +31,6 @@ Specific git-branch actions:
 ";
 
 int main(string[] argv) {
-    writeln(prettyPrintArgs(docopt.docopt(doc, argv[1..$])));
+    writeln(prettyPrintArgs(std.docopt.docopt(doc, argv[1..$])));
     return 0;
 }
